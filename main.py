@@ -5,17 +5,17 @@ import ytthumb
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-load_dotenv()
+
 
 Bot = Client(
-    "YouTube-Thumbnail-Downloader",
+    "Yt-thum-bot",
     bot_token = os.environ.get("BOT_TOKEN"),
     api_id = int(os.environ.get("API_ID")),
     api_hash = os.environ.get("API_HASH")
 )
 
 START_TEXT = """Hello {},
-I am a simple youtube thumbnail downloader telegram bot.
+I am a simple Youtube thumbnail downloader telegram bot.
 
 - Send a youtube video link or video ID.
 - I will send the thumbnail.
@@ -25,9 +25,9 @@ I am a simple youtube thumbnail downloader telegram bot.
   - hq - High Quality
   - maxres - Maximum Resolution
 
-Made by @FayasNoushad"""
+Made by @CrazeBots"""
 
-BUTTON = [InlineKeyboardButton('⚙ Join Channel ⚙', url='https://telegram.me/FayasNoushad')]
+BUTTON = [InlineKeyboardButton('⚙ Join Channel ⚙', url='https://telegram.me/CrazeBots')]
 
 photo_buttons = InlineKeyboardMarkup(
     [[InlineKeyboardButton('Other Qualities', callback_data='qualities')], BUTTON]
