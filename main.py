@@ -104,7 +104,7 @@ async def start(_, message):
     )
 
 
-@Bot.on_message(filters.private & filters.text)
+@Bot.on_message(filters.incoming & filters.private & filters.text)
 async def send_thumbnail(_, update):
     message = await update.reply_text(
         text="`Analysing...`",
